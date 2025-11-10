@@ -1,0 +1,42 @@
+﻿Column,Data type,Description,Values
+Serial number,Numeric,Unique primary identifier for the study within this dataset.,
+Metadata of the article,,,
+PMID,Numeric,Unique identifier of articles in the PubMed database.,
+Journal/Book,Text,Name of the journal or book in which the article is published,
+Publication year,Numeric,Year in which the article or book is published,recorded as a 4-digit integer.
+Title,Text,Title of the article,
+DOI,Text,Digital Object Identifier of the article,Standard format: 10.xxxx/xxxxxx
+Citation,Text,Citation of the article in AMA format,
+Authors,Text,Names of the authors who contributed to the study,"Standardize format to avoid variability (Last name, Initial)"
+Keywords flagged,Text,Keywords identified from the title and abstract that matched keywords from the search query,Store as a semi-colon separated list of keywords.
+Study aim,,,
+Self-reported study aim,Text,Verbatim description of the study's primary objective using the model,
+Study category,Category,Primary classification of the study aim,Possible Values
+,,,Understanding Epidemic Spread
+,,,Intervention Impact Assessment
+,,,Behavioral Influence on Spread
+,,,Forecasting
+,,,Theoretical Advancement
+,,,Others
+Study context,,,
+Study location,,Geographic location where the study was carried out,
+Location,Text,"granular geographic location where the study was carried out (e.g., specific city, county, or state)",
+US state,Text,Name of the US state (if any),"If multiple, record as a comma-separated list. "
+Country,Text,"Full, standardized name of the country modeled.","If multiple, record as a comma-separated list."
+Study population,Text,Detailed description of the population group(s) studied,
+Pathogen,Text,The specific respiratory pathogen the study focuses on,"If multiple, record as a comma-separated list of standardized pathogen names."
+Model details,,,
+Programming language,Text,The programming language  used to build the model,
+Population size,Numeric,The number of individuals or agents simulated in the model,
+Agent’s sociodemographic variables,,,
+Age,Boolean,Indicates whether age data or age-stratification was incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+Sex,Boolean,Indicates whether sex or gender data was incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+Race/ethnicity,Boolean,Indicates whether race/ethnicity data was incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+Income,Boolean,Indicates whether income levels were incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+Modeled interventions,,,
+Vaccination,Boolean,Indicates whether vaccination strategies were implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+Screening and/or testing,Boolean,Indicates whether screening/testing strategies were implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+Masking,Boolean,Indicates whether the use of face masks was implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+Contact tracing,Boolean,Indicates whether contact tracing was implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+School closure,Boolean,Indicates whether school closure was implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+Social distancing,Boolean,Indicates whether social distancing measures were implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
