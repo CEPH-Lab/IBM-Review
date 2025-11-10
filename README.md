@@ -1,11 +1,12 @@
-# IBM-Review
+# IBM-Review: "Mapping the Landscape of Individual-Based Models for Respiratory Pathogen Transmission in the Pandemic and Post-Pandemic Era (2020–2024): A Systematic Review"
 This repository contains the extracted data and associated files for the systematic review titled, "Mapping the Landscape of Individual-Based Models for Respiratory Pathogen Transmission in the Pandemic and Post-Pandemic Era (2020–2024): A Systematic Review."
 
 The review systematically identified, characterized, and synthesized key findings from modeling studies published between January 2020 and December 2024 that employed Individual-Based Models (IBMs) to simulate the transmission dynamics of human respiratory viral pathogens.
 
 ## Data and File Structure
 The following files are included in this repository to document the systematic review process and results:
-The primary data file, ```IBM_Review_Cleaned.csv```, contains all extracted information from the studies included in this review, including model characteristics, parameter inputs, and key findings. A complete data dictionary for all columns is available as an accompanying document: ```data_dictionary.csv```
+- [IBM_Review_Cleaned.csv](data/IBM_Review_Cleaned.csv) which contains all extracted information from the studies included in this review, including model characteristics, parameter inputs, and key findings.
+- [data_dictionary.csv](data/data_dictionary.csv) which contains a complete data dictionary for all columns.
 
 ## Search Methodology
 The review was conducted according to the guidelines outlined in the Preferred Reporting Items for Systematic reviews and Meta-Analyses (PRISMA) 2020 Statement. The search was conducted across the PubMed and Scopus databases, targeting peer-reviewed literature published from January 2020 through December 2024, focused on Individual-Based Models for infectious disease transmission.
