@@ -5,7 +5,8 @@ The review systematically identified, characterized, and synthesized key finding
 
 ## Data and File Structure
 The following files are included in this repository to document the systematic review process and results:
-The primary data file, ```IBM_Review_Cleaned.csv```, contains all extracted information from the studies included in this review, including model characteristics, parameter inputs, and key findings. A complete data dictionary for all columns is available as an accompanying document: ```data_dictionary.csv```
+- [IBM_Review_Cleaned.csv](data/IBM_Review_Cleaned.csv) which contains all extracted information from the studies included in this review, including model characteristics, parameter inputs, and key findings.
+- [data_dictionary.csv](data/data_dictionary.csv) which contains a complete data dictionary for all columns.
 
 ## Search Methodology
 The review was conducted according to the guidelines outlined in the Preferred Reporting Items for Systematic reviews and Meta-Analyses (PRISMA) 2020 Statement. The search was conducted across the PubMed and Scopus databases, targeting peer-reviewed literature published from January 2020 through December 2024, focused on Individual-Based Models for infectious disease transmission.
