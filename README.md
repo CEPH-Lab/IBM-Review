@@ -22,5 +22,5 @@ This dataset is released in conjunction with the publication of the systematic r
 Contact: Marco Ajelli, Laboratory for Computational Epidemiology and Public Health, Department of Epidemiology and Biostatistics, Indiana University School of Public Health, Bloomington, IN, USA
 majelli@iu.edu
 
-Recommended Citation (Placeholder): Mhade, S., Bhosekar, U., Hill, M. D., Sinclair, S., Agrawal, S., Guerrini, J., Zou, L., Koebcke, A., Kummer, A. G., Ventura, P. C., Del Valle, S., Chinazzi, M., Litvinova, M., Vespignani, A., & Ajelli, M. (Year). Mapping the Landscape of Individual-Based Models for Respiratory Pathogen Transmission in the Pandemic and Post-Pandemic Era (2020–2024): A Systematic Review. [Journal Name], [Volume], [Issue], [Pages/Article ID]. DOI: [Insert DOI when available].
+Recommended Citation: Mhade, S., Bhosekar, U., Hill, M. D., Sinclair, S., Agrawal, S., Guerrini, J., Zou, L., Koebcke, A., Kummer, A. G., Ventura, P. C., Del Valle, S., Chinazzi, M., Litvinova, M., Vespignani, A., & Ajelli, M. (2025). Mapping the Landscape of Individual-Based Models for Respiratory Pathogen Transmission in the Pandemic and Post-Pandemic Era (2020–2024): A Systematic Review. Available at *SSRN*. DOI: [http://dx.doi.org/10.2139/ssrn.5736584](http://dx.doi.org/10.2139/ssrn.5736584).
 
