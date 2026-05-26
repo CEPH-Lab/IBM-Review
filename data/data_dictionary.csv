@@ -8,6 +8,7 @@ Title,Text,Title of the article,
 DOI,Text,Digital Object Identifier of the article,Standard format: 10.xxxx/xxxxxx
 Citation,Text,Citation of the article in AMA format,
 Authors,Text,Names of the authors who contributed to the study,"Standardize format to avoid variability (Last name, Initial)"
+Author affiliation, Text, Name of the country (or countries) of the institutional affiliation(s) for each author, Store as a comma seperated name of the countries.
 Keywords flagged,Text,Keywords identified from the title and abstract that matched keywords from the search query,Store as a semi-colon separated list of keywords.
 Study aim,,,
 Self-reported study aim,Text,Verbatim description of the study's primary objective using the model,
@@ -28,6 +29,14 @@ Pathogen,Text,The specific respiratory pathogen the study focuses on,"If multipl
 Model details,,,
 Programming language,Text,The programming language  used to build the model,
 Population size,Numeric,The number of individuals or agents simulated in the model,
+Model Type, Text, the specific individual-level modeling approach as self-reported by the study authors, If multiple recorded as a comma-separated list
+Data,Category,Primary classification of the study aim,Possible Values
+,,,Understanding Epidemic Spread
+,,,Intervention Impact Assessment
+,,,Behavioral Influence on Spread
+,,,Forecasting
+,,,Theoretical Advancement
+,,,Others
 Agent’s sociodemographic variables,,,
 Age,Boolean,Indicates whether age data or age-stratification was incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
 Sex,Boolean,Indicates whether sex or gender data was incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
