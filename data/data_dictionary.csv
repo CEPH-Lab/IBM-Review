@@ -1,51 +1,42 @@
-﻿Column,Data type,Description,Values
-Serial number,Numeric,Unique primary identifier for the study within this dataset.,
-Metadata of the article,,,
-PMID,Numeric,Unique identifier of articles in the PubMed database.,
-Journal/Book,Text,Name of the journal or book in which the article is published,
-Publication year,Numeric,Year in which the article or book is published,recorded as a 4-digit integer.
-Title,Text,Title of the article,
-DOI,Text,Digital Object Identifier of the article,Standard format: 10.xxxx/xxxxxx
-Citation,Text,Citation of the article in AMA format,
-Authors,Text,Names of the authors who contributed to the study,"Standardize format to avoid variability (Last name, Initial)"
-Author affiliation, Text, Name of the country (or countries) of the institutional affiliation(s) for each author, Store as a comma seperated name of the countries.
-Keywords flagged,Text,Keywords identified from the title and abstract that matched keywords from the search query,Store as a semi-colon separated list of keywords.
-Study aim,,,
-Self-reported study aim,Text,Verbatim description of the study's primary objective using the model,
-Study category,Category,Primary classification of the study aim,Possible Values
-,,,Understanding Epidemic Spread
-,,,Intervention Impact Assessment
-,,,Behavioral Influence on Spread
-,,,Forecasting
-,,,Theoretical Advancement
-,,,Others
-Study context,,,
-Study location,,Geographic location where the study was carried out,
-Location,Text,"granular geographic location where the study was carried out (e.g., specific city, county, or state)",
-US state,Text,Name of the US state (if any),"If multiple, record as a comma-separated list. "
-Country,Text,"Full, standardized name of the country modeled.","If multiple, record as a comma-separated list."
-Study population,Text,Detailed description of the population group(s) studied,
-Pathogen,Text,The specific respiratory pathogen the study focuses on,"If multiple, record as a comma-separated list of standardized pathogen names."
-Model details,,,
-Programming language,Text,The programming language  used to build the model,
-Population size,Numeric,The number of individuals or agents simulated in the model,
-Model Type, Text, the specific individual-level modeling approach as self-reported by the study authors, If multiple recorded as a comma-separated list
-Data,Category,Primary classification of the study aim,Possible Values
-,,,Understanding Epidemic Spread
-,,,Intervention Impact Assessment
-,,,Behavioral Influence on Spread
-,,,Forecasting
-,,,Theoretical Advancement
-,,,Others
-Agent’s sociodemographic variables,,,
-Age,Boolean,Indicates whether age data or age-stratification was incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
-Sex,Boolean,Indicates whether sex or gender data was incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
-Race/ethnicity,Boolean,Indicates whether race/ethnicity data was incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
-Income,Boolean,Indicates whether income levels were incorporated in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
-Modeled interventions,,,
-Vaccination,Boolean,Indicates whether vaccination strategies were implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
-Screening and/or testing,Boolean,Indicates whether screening/testing strategies were implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
-Masking,Boolean,Indicates whether the use of face masks was implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
-Contact tracing,Boolean,Indicates whether contact tracing was implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
-School closure,Boolean,Indicates whether school closure was implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
-Social distancing,Boolean,Indicates whether social distancing measures were implemented in the model,TRUE = Yes/Included; FALSE = No/Not Reported.
+﻿Data Dictionary,,,,,
+Dataset for Mapping the Landscape of Individual-Based Models for Respiratory Pathogen Transmission in the Pandemic and Post-Pandemic Era (2020–2024): A Systematic Review (Mhade et al),,,,,
+Total variables: 37    |    Source file: dataset_-_IBM-review.csv    |    Records: 855 studies,,,,,
+,,,,,
+Section,Column name,Data type,Description,Allowed / possible values,Notes / encoding
+Identifier,Serial Number,Integer,Unique primary identifier assigned to each study within this dataset.,"Sequential positive integers (1, 2, 3, …).",Auto-incremented; no duplicates.
+Article metadata,PMID,Integer,PubMed identifier — unique ID of the article in the PubMed/NLM database.,Positive integer (typically 7–9 digits).,Blank if the article is not indexed in PubMed.
+Article metadata,DOI,Text (URL),Digital Object Identifier of the article.,Standard format: https://doi.org/10.xxxx/xxxxxx,Stored as a clickable URL.
+Article metadata,Journal/Book,Text,Name of the journal or book in which the article was published.,"Free text (e.g., 'Sci Rep', 'Comput Biol Med').",Use the NLM-standardized abbreviated title where available.
+Article metadata,Publication year,Integer (year),Year in which the article was published.,4-digit year (observed range: 2020–2024).,"Recorded as integer, not date."
+Article metadata,Publication Month,Text (month name),Month in which the article was published.,"Full month name: January, February, …, December.",Stored as a text label rather than a numeric month.
+Article metadata,Title,Text,Full title of the article.,Free text.,Verbatim from the original publication.
+Article metadata,Citation,Text,Full citation of the article in AMA format.,Free text following the AMA citation style.,"Includes authors, title, journal, year, volume(issue):pages, DOI."
+Article metadata,Authors,Text,Names of the authors who contributed to the study.,"Comma-separated list in 'Last name Initials' format (e.g., 'Castro BM, Reis MM, Salles RM').",
+Article metadata,Author affiliation,Text,Country (or countries) of the institutional affiliation(s) of the authors.,"Comma-separated list of country names (e.g., 'Argentina, USA').","Captures the country of affiliation, not the institution name."
+Article metadata,Keywords flagged,Text,Keywords identified from the title and abstract that matched the search-query keywords.,"Semi-colon-separated list of keywords (e.g., 'agent-based model; epidemics; transmissibility').",Drawn from the article's listed keywords and/or abstract.
+Study aim,Self-reported study aim,Text,Verbatim description of the study's primary objective involving the model.,"Free text, extracted from the article (typically the abstract or introduction).",
+Study aim,Study category,Categorical,Primary classification of the study aim. Multi-label allowed.,One or more of: 'Understanding Epidemic Spread'; 'Intervention Impact Assessment'; 'Behavioral Influence on Spread'; 'Forecasting'; 'Theoretical Advancements'; 'Other'.,"If multiple categories apply, record as a comma-separated list."
+Study context — Location,Study location: Location,Text,"Granular geographic location where the study was carried out (e.g., specific city, county, or sub-national region).","Free text (e.g., 'Passa Vinte, Minas Gerais (Brazil)'). '--' if not applicable (e.g., theoretical studies).",
+Study context — Location,Study location: US state,Text,"Name of the US state(s) the study modeled, if any.",Full state name(s); comma-separated list if multiple. Blank if not US-based.,
+Study context — Location,Study location: Country,Text,"Full, standardized name of the country (or countries) modeled.",Comma-separated list of country names. 'Theoretical' if no real-world country is modeled.,"If multiple, list as comma-separated."
+Study context,Study population,Text,Detailed description of the population group(s) modeled in the study.,"Free text (e.g., 'General', 'Healthcare workers', 'School-aged children').",
+Study context,Pathogen,Categorical,The specific respiratory pathogen(s) the study focuses on.,Standardized pathogen names: 'SARS-CoV-2'; 'Influenza Virus'; 'Other corona viruses'; 'Vaccine preventable respiratory viruses'; 'Generic respiratory viruses'; 'Generic respiratory pathogen'; 'Other'.,"If multiple pathogens are modeled, record as a comma-separated list."
+Model details,Programming language,Categorical,Programming language(s) used to build/run the model.,"Examples: 'Python', 'R', 'JAVA', 'NetLogo', 'C Family', 'MATLAB', 'Julia', 'Other/Unknown'.","If multiple, comma-separated. Use 'Other/Unknown' when not reported."
+Model details,Population size,Numeric / Text,Number of individuals or agents simulated in the model.,"Positive integer. May appear in scientific notation (e.g., '1.00E+05'). 'Unknown' if not reported.",
+Model details,Model type,Categorical,Specific individual-level modeling approach as self-reported by the study authors.,Examples: 'Agent-Based Model'; 'Individual-Based Model'; 'Network Model'; 'Compartmental Model'; 'Multi-agent Model'; 'Cellular Automata'.,"If multiple model types are used, record as a comma-separated list."
+Agent sociodemographic variables,Age,Boolean,Indicates whether age or age-stratification was incorporated as an agent attribute.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Agent sociodemographic variables,Sex,Boolean,Indicates whether sex or gender was incorporated as an agent attribute.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Agent sociodemographic variables,Race/ethnicity,Boolean,Indicates whether race/ethnicity was incorporated as an agent attribute.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Agent sociodemographic variables,Income,Boolean,Indicates whether income (or socioeconomic status as a proxy) was incorporated as an agent attribute.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Modeled interventions,Vaccination,Boolean,Indicates whether vaccination strategies were implemented in the model.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Modeled interventions,Screening and/or testing,Boolean,Indicates whether screening and/or testing strategies were implemented in the model.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Modeled interventions,Masking,Boolean,Indicates whether the use of face masks was implemented in the model.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Modeled interventions,Contact tracing,Boolean,Indicates whether contact tracing was implemented in the model.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Modeled interventions,School closure,Boolean,Indicates whether school closure was implemented in the model.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Modeled interventions,Social distancing,Boolean,Indicates whether social distancing measures were implemented in the model.,TRUE = Yes/Included; FALSE = No/Not reported.,
+Epidemiological data used for calibration,Data: Cases,Binary (0 / 1),Indicates whether the model reports case counts as an output.,1 = Reported; 0 = Not reported;,
+Epidemiological data used for calibration,Data: Deaths,Binary (0 / 1),Indicates whether the model reports death counts as an output.,1 = Reported; 0 = Not reported;,
+Epidemiological data used for calibration,Data: Hospitalizations,Binary (0 / 1),Indicates whether the model reports hospitalization counts as an output.,1 = Reported; 0 = Not reported;,
+Epidemiological data used for calibration,Data: ICU,Binary (0 / 1),Indicates whether the model reports ICU admission counts as an output.,1 = Reported; 0 = Not reported;,
+Epidemiological data used for calibration,Data: Infections,Binary (0 / 1),Indicates whether the model reports infection counts (including asymptomatic) as an output.,1 = Reported; 0 = Not reported;,
+Sensitivity analysis,Sensitivity,Binary (0 / 1),Indicates whether the study conducted a sensitivity analysis on the model.,1 = Sensitivity analysis performed; 0 = Not performed/Not reported.,
